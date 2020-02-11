@@ -6,10 +6,11 @@ var mqtt = require('mqtt');
 var fs = require('fs');
 var fileName = 'public/data.json';
 
-var broker = 'mqtt://test.mosquitto.org';
+// var broker = 'mqtt://test.mosquitto.org';
 
-// var client = mqtt.connect('mqtt://ee-estott-octo.ee.ic.ac.uk', {clientId:'backend'});
-var client = mqtt.connect(broker);
+var broker = 'mqtt://ee-estott-octo.ee.ic.ac.uk';
+var client = mqtt.connect(broker, {clientId:'backend'});
+
 client.on("connect", function() {
     console.log('Connected to mqtt broker: ' + broker);
 });
