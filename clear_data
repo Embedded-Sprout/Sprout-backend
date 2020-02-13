@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rm public/data.json && cp data_empty.json public/data.json
